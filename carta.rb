@@ -1,5 +1,5 @@
 class Card
-    attr_accessor :number, :pinta, :cards_n
+    attr_accessor :number, :pinta
     def initialize(number, pinta)
         @number = number
         @pinta = pinta
