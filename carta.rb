@@ -1,18 +1,17 @@
 class Card
     attr_accessor :number, :pinta, :cards_n
-    def initialize
-        @number = Random.rand(1..13)
-        @pinta = ['C', 'D', 'E', 'T'].sample
-    end
-    def insert_cards(number_of_cards = 5)
-        @cards_n = Array.new
-        number_of_cards.times do |i|
-            @cards_n.push(Card.new)
-        end
+    def initialize(number, pinta)
+        @number = number
+        @pinta = pinta
     end
 end
 
+# probaremos la clase creando un arreglo de 5 cartas
+ 
+cards_array = []
+5.times do |i|
+    cards_array.push(Card.new(Random.rand(1..13), ['C', 'D', 'E', 'T'].sample))
+end
 
-card1 = Card.new
-puts card1.insert_cards
-puts card1.cards_n
+puts cards_array
+
