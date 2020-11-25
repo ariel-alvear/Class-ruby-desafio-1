@@ -1,7 +1,7 @@
 class Card
     attr_accessor :number, :pinta, :cards_n
     def initialize
-        @number = [1,2,3,4,5,6,7,8,9,10,11,12,13].sample
+        @number = Random.rand(1..13)
         @pinta = ['C', 'D', 'E', 'T'].sample
     end
     def insert_cards(number_of_cards = 5)
